@@ -14,15 +14,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    @IBAction func unwind(segue: UIStoryboardSegue) {
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
+        let resultViewController:ResultViewController = segue.destinationViewController as! ResultViewController
+        resultViewController.x = 1
+         }
+@IBAction func unwind(segue: UIStoryboardSegue) {
+        }
+    }
+    
 
-
-}
 
